@@ -54,7 +54,7 @@ def get_information(url: str) -> str:
         return f"Error: {str(e)}"
  
  
-model = ChatOpenAI(model='gpt-4o-mini')  # BUG FIX 2: 'gpt-5' invalid/typo tha, confirm apna access aur naam
+model = ChatOpenAI(model='gpt-4o-mini') 
  
  
 def search_agent():
@@ -150,8 +150,7 @@ def get_research(inp: str) -> dict:
 if __name__ == "__main__":
     inp = input("Make your research ")
     try:
-        result = get_research(inp)   # BUG FIX 4: prints ab actual kaam ke doran ho rahe hain,
-                                       # pehle result ready hone ke BAAD fake time.sleep() prints ho rahe thay
+        result = get_research(inp)
         print("\n" + "=" * 50)
         print(result["report"])
         print("\n" + "=" * 50)
